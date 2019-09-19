@@ -67,6 +67,12 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
 
 ## Code
 
+### Important: formatting around image link line
+In the examples, you will see markdown image inclusion syntax.  To make the markdown work within the `ResourceCard` tag, you **must**
+* start the markdown in column 1, 2, or 3, and
+* have a new line (with no blanks/tabs) in front of, and behind the markdown line.
+* have the final `ResourceCard` closing tag start in column 1, 2, or 3 (if you start it in 4 or more, it is interpreted as markdown syntax for a code snippet).
+
 #### Group
 
 ```jsx path=components/ResourceCard/ResourceCard.js src=https://github.com/carbon-design-system/gatsby-theme-carbon/tree/master/packages/gatsby-theme-carbon/src/components/ResourceCard
@@ -76,16 +82,20 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
       subTitle="Carbon Design System"
       href="https://www.carbondesignsystem.com"
     >
-      ![Github icon](/images/github-icon.png)
-    </ResourceCard>
+
+![Github icon](/images/github-icon.png)
+
+  </ResourceCard>
   </Column>
   <Column colMd={4} colLg={4} noGutterSm>
     <ResourceCard
       subTitle="Carbon Design System"
       href="https://www.carbondesignsystem.com"
     >
-      ![Github icon](/images/github-icon.png)
-    </ResourceCard>
+
+![Github icon](/images/github-icon.png)
+
+  </ResourceCard>
   </Column>
 </Row>
 ```
@@ -101,7 +111,9 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
     actionIcon="arrowRight"
     href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
   >
-    ![Github icon](/images/github-icon.png)
+
+![Github icon](/images/github-icon.png)
+
   </ResourceCard>
 </Column>
 ```
@@ -116,7 +128,9 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
     aspectRatio="2:1"
     href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
   >
-    ![Github icon](/images/github-icon.png)
+
+![Github icon](/images/github-icon.png)
+
   </ResourceCard>
 </Column>
 ```
@@ -133,7 +147,9 @@ The `<ResourceCard>` component should be wrapped with a `<Column>` inside of `<R
     actionIcon="email"
     href="https://github.com/IBM/carbon-elements/blob/master/.github/CONTRIBUTING.md"
   >
-    ![Sketch icon](/images/sketch-icon.png)
+
+![Sketch icon](/images/sketch-icon.png)
+
   </ResourceCard>
 </Column>
 ```
